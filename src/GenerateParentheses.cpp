@@ -48,7 +48,7 @@ public:
             append(array,index,left,right);
             right++;
             index--;
-		}
+        }
     }
 };
 
