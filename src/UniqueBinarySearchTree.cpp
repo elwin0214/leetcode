@@ -12,21 +12,21 @@ class Solution {
 public:
     int numTrees(int n) {
     	vector<int> vec;
-    	for(int i=0;i<=n;i++)
+    	for(int i=0; i<=n; i++)
     		vec.push_back(0);
     	vec[0]=1;
     	vec[1]=1;
     	vec[2]=2;
         int sum=0;
-        for(int i=0;i<=n;i++){
+        for(int i=0; i<=n; i++){
         	if(vec[i]==0)
         	{	
         		int sum=0;
-        		for(int j=0;j<i;j++){
+        		for(int j=0; j<i; j++)
+                {
         			sum=sum+vec[j]*vec[i-j-1];
         		}
         		vec[i]=sum;
-
         	}
         }
         return vec[n]; 

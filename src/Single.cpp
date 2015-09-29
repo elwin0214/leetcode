@@ -1,8 +1,10 @@
 
 
-class Solution {
+class Solution 
+{
 public:
-    int singleNumber(vector<int>& nums) {
+    int singleNumber(vector<int>& nums) 
+    {
         vector<int>::iterator it;
     	int result=0;
         for(it=nums.begin();it!=nums.end();it++)

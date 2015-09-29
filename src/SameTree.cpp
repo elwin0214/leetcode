@@ -4,7 +4,8 @@
     TreeNode *right;
       TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  };
-class Solution {
+class Solution 
+{
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
         if (p==q)
