@@ -18,12 +18,11 @@ public:
         int min=prices[0];
         for(int i=1;i<prices.size();i++)
         {
-        	if(min>prices[i-1])
-            	min=prices[i-1];
-            max_profit=(prices[i]-min)>max_profit?(prices[i]-min):max_profit;
-        }
-
-        return max_profit;
+			if(min>prices[i-1])
+				min=prices[i-1];
+			max_profit=(prices[i]-min)>max_profit?(prices[i]-min):max_profit;
+		}
+		return max_profit;
         }
 
 };

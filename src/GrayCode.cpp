@@ -18,10 +18,10 @@ public:
             int index=j;
             int dur=j/step;
             if(dur%4==0||dur%4==3)
-			{
+            {
                 vec[index] = (vec[index]<<1);
-    		}
-    		else
+            }
+            else
             {
                 vec[index] = (vec[index]<<1)+1;
             }
