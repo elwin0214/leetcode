@@ -11,36 +11,36 @@ n=3 000 001 011 010 110 111 101 100  (append:01 10 01 10)
 class Solution 
 {
 public:
-    void append(vector<int> &vec,int step)
+void append(vector<int> &vec,int step)
+{
+    for(int j=0; j<vec.size(); j++)
     {
-        for(int j=0; j<vec.size(); j++)
-    	{
-            int index=j;
-            int dur=j/step;
-            if(dur%4==0||dur%4==3)
-            {
-                vec[index] = (vec[index]<<1);
-            }
-            else
-            {
-                vec[index] = (vec[index]<<1)+1;
-            }
-    	}
-
-	}
-    vector<int> grayCode(int n) {
-    	int size=1<<n;
-    	vector<int> vec;
-        for(int i=0;i<size;i++)
+        int index=j;
+        int dur=j/step;
+        if(dur%4==0||dur%4==3)
         {
-            vec.push_back(0);
-    	}
-    	for(int i=0;i<n;i++)
-    	{
-            append(vec,1<<(n-1-i));
-    	}
-    	return vec;
+            vec[index] = (vec[index]<<1);
+        }
+        else
+        {
+            vec[index] = (vec[index]<<1)+1;
+        }
     }
+}
+vector<int> grayCode(int n) 
+{
+    int size=1<<n;
+    vector<int> vec;
+    for(int i=0;i<size;i++)
+    {
+        vec.push_back(0);
+    }
+    for(int i=0;i<n;i++)
+    {
+        append(vec,1<<(n-1-i));
+    }
+    return vec;
+}
 };
 
 void print(vector<int> vec)
