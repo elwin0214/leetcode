@@ -12,7 +12,7 @@ class Solution
 {
 
 private:
-	vector<string> vec;
+vector<string> vec;
 
 public:
 vector<string> generateParenthesis(int n) 
