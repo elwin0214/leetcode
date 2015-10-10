@@ -8,108 +8,106 @@ using namespace std;
 
 class NQueue
 {
-	public:
-	 vector<int> oneNQueue(int n)
-	 {
-	 	int x=0;
-	 	vector<int> vec;
-	 	for(int x=0; x<n; x++)
-	 	{
-	 		vec.push_back(-1);
-	 	}
-	 	while(true)
-	 	{
-	 		while(true)
-	 		{
-	 			vec[x]++;
-	 			if(vec[x]>=n)
-	 			{
-	 				vec[x]=-1;
-	 				x--;
-	 				break;
-	 			}
-	 			if(conflict(vec,x,vec[x]))
-	 			{
-	 				continue;
-	 			}
-	 			else
-	 			{
-	 				x++;
-	 				break;
-	 			}
-	 		}
-	 		if(vec[0]==-1)
-	 		{
-	 			break;
-	 		}
-	 		if(x>=n)
-	 		{
-
-	 			break;
-	 		}
-	 	}
-	 	return vec;
+  public:
+    vector<int> oneNQueue(int n)
+    {
+    	int x=0;
+    	vector<int> vec;
+	 	  for(int x=0; x<n; x++)
+	 	  {
+	 		  vec.push_back(-1);
+	 	  }
+	 	  while(true)
+	 	  {
+	 		  while(true)
+	 		  {
+	 			  vec[x]++;
+	 			  if(vec[x]>=n)
+	 			  {
+	 				  vec[x]=-1;
+	 				  x--;
+	 				  break;
+	 			  }
+	 			  if(conflict(vec,x,vec[x]))
+	 			  {
+	 				  continue;
+	 			  }
+	 			  else
+	 			  {
+	 				  x++;
+	 				  break;
+	 			  }
+	 		  }
+	 		  if(vec[0]==-1)
+	 		  {
+	 			  break;
+	 		  }
+	 		  if(x>=n)
+	 		  {
+	 			 break;
+	 		  }
+	 	  }
+	 	  return vec;
 	 }
 
-	 vector<vector<int>> totalNQueues(int n)
-	 {
-	 	int x=0;
-	 	vector<vector<int>> totalVec;
-	 	vector<int> vec;
-	 	for(int x=0; x<n; x++)
-	 	{
-	 		vec.push_back(-1);
-	 	}
-	 	while(true)
-	 	{
-	 		while(true)
-	 		{
-	 			vec[x]++;
-	 			if(vec[x]>=n)
-	 			{
-	 				vec[x]=-1;
-	 				x--;
-	 				break;
-	 			}
-	 			if(conflict(vec,x,vec[x]))
-	 			{
-	 				continue;
-	 			}
-	 			else
-	 			{
-	 				x++;
-	 				break;
-	 			}
-	 		}
-	 		if(vec[0]==-1)
-	 		{
-	 			break;
-	 		}
-	 		if(x>=n)
-	 		{
-	 			//
-	 			totalVec.push_back(vec);
-	 			x--;
-	 			continue;
+    vector<vector<int>> totalNQueues(int n)
+	  {
+	 	  int x=0;
+	 	  vector<vector<int>> totalVec;
+	 	  vector<int> vec;
+	 	  for(int x=0; x<n; x++)
+	 	  {
+	 		  vec.push_back(-1);
+	 	  }
+	 	  while(true)
+	 	  {
+	 		  while(true)
+	 		  {
+	 			  vec[x]++;
+	 			  if(vec[x]>=n)
+	 			  {
+	 				  vec[x]=-1;
+	 				  x--;
+	 				  break;
+	 			  }
+	 			  if(conflict(vec,x,vec[x]))
+	 			  {
+	 				  continue;
+	 			  }
+	 			  else
+	 			  {
+	 				  x++;
+	 				  break;
+	 			  }
+	 		  }
+	 		  if(vec[0]==-1)
+	 		  {
+	 			  break;
+	 		  }
+	 		  if(x>=n)
+	 		  {
+	 			  totalVec.push_back(vec);
+	 			  x--;
+	 			  continue;
 	 			//break;
-	 		}
-	 	}
-	 	return totalVec;
-	 }
+	 		  }
+	 	  }
+	 	  return totalVec;
+      }
 
-	 bool conflict(vector<int> &vec,int x,int y)
-	 {
-	 		for(int i=0; i<x; i++)
-	 		{
-	 			if(abs(x-i)==abs(y-vec[i]) || y==vec[i])
-	 			{
-	 				return true;
-	 			}
-	 			continue;
+	   bool conflict(vector<int> &vec,int x,int y)
+	   {
+        for(int i=0; i<x; i++)
+	 		  {
+	 			  if(abs(x-i)==abs(y-vec[i]) || y==vec[i])
+	 			  {
+	 				  return true;
+	 			  }
+	 			  continue;
 
-	 		}
-	 		return false;
-	 }
+	 		  }
+	 		  return false;
+	    }
 };
 
 int main(){
