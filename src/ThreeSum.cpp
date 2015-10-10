@@ -4,7 +4,10 @@ using std::vector;
 using std::cout;
 using std::endl;
 
-
+/*
+* 15.3Sum
+* attention:discard repeated result
+*/
 
 class Solution 
 {
