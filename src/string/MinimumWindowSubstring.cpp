@@ -1,5 +1,22 @@
 /*
 https://leetcode.com/problems/minimum-window-substring/
+76.Minimum Window Substring 
+
+
+Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+
+For example,
+S = "ADOBECODEBANC"
+T = "ABC"
+Minimum window is "BANC".
+
+Note:
+If there is no such window in S that covers all characters in T, return the empty string "".
+
+If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.
+
+Subscribe to see which companies asked this question
+
 */
 #include <iostream>
 #include <string>
@@ -20,7 +37,10 @@ public:
   string minWindow(string s, string t) {
     //int []
     int dict_len=LEN;
-    int dict[LEN]={-1};
+    int dict[LEN];
+    for(int i=0; i<LEN; i++) {
+      dict[i] = -1;
+    }
     for_each(t.begin(), t.end(), [&dict](char &c){
       int index=(int)c;
       dict[index]=(-1==dict[index]?1:(dict[index]+1));
@@ -29,7 +49,10 @@ public:
     int start = 0;
     int end = 0;
     int source_len = s.size();
-    int source[LEN] = {-1};
+    int source[LEN];
+    for(int i=0; i<LEN; i++) {
+      source[i] = -1;
+    }
     int min_len = s.size()+1;
     string min_str;
 
@@ -51,7 +74,7 @@ public:
         if (source[ch] >= dict[ch]) {
           continue;
         }
-        cout<<end<<" "<<start<<" "<<s.substr(start,end-start+1)<<" min_len:"<<min_len<<",dis:"<<(end-start)<<endl;
+        //cout<<end<<" "<<start<<" "<<s.substr(start,end-start+1)<<" min_len:"<<min_len<<",dis:"<<(end-start)<<endl;
         if (min_len > (end-start+1)) {
           min_str = s.substr(start,end-start+1);
           min_len=end-start+1;
@@ -95,6 +118,9 @@ int main() {
   cout<<"a "<<s.minWindow("a","a")<<endl;
 
  
+  vector<int> v={1,2,3};
+  auto i=v.cbegin();
+   //*i=2;
   // map<int,int> m;
   // auto it=m.insert({1,2});
   // cout<<(it.first->second)<<" "<<(it.second)<<endl;

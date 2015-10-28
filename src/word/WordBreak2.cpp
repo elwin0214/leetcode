@@ -1,3 +1,24 @@
+/*
+https://leetcode.com/problems/word-break-ii/
+Word Break II 
+Given a string s and a dictionary of words dict, add spaces in s to construct a sentence where each word is a valid dictionary word.
+
+Return all such possible sentences.
+
+For example, given
+s = "catsanddog",
+dict = ["cat", "cats", "and", "sand", "dog"].
+
+A solution is ["cats and dog", "cat sand dog"].
+
+思路：
+参考 word break。
+数组多了一维，用来记录满足当前条件满足时，各个下标
+
+S[1,k]满足，则dp[k] 是一个数组。dp[k][j]==1 => S[1,j]满足
+
+*/
+
 #include <unordered_set>
 #include <iostream>
 #include <string>

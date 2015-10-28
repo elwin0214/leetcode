@@ -18,7 +18,9 @@ isMatch("aa", "a*") → true
 isMatch("ab", "?*") → true
 isMatch("aab", "c*a*b") → false
 */
+
 /*
+思路：
 S=s1s2....sn
 P=p1p2....pm
 
@@ -33,7 +35,7 @@ a 1 0 0 0 0
 b 0 0 0 1 1
 
 attendtion:
-1.二维数组栈溢出
+1.二维数组栈溢出，改为2个一维数组
 2.dp_before->dp_current 丢掉脏数据
 3.边界值，空串等
 

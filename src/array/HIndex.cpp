@@ -1,8 +1,8 @@
 #include <vector>
-#include <queue>
 #include <iostream>
 #include <string>
-#include <algorithm>
+#include <map>
+#include <vector>
 
 
 using namespace std;
@@ -95,4 +95,8 @@ int main()
 	// v={1,1,1};
 	// s.quicksort(v, 0, v.size()-1);
 	// print(v);
+	map<int,pair<int,vector<int>* > > m;
+	m.insert({1,{2,new vector<int>()}});
+
+	return 0;
 }

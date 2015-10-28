@@ -1,13 +1,17 @@
 /*
 https://leetcode.com/problems/longest-valid-parentheses/
-*/
-#include <iostream>
-#include <string>
-#include <stack>
-#include <algorithm>
-#include <memory>
+Longest Valid Parentheses
 
-using namespace std;
+Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+
+For "(()", the longest valid parentheses substring is "()", which has length = 2.
+
+Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
+
+Subscribe to see which companies asked this question
+
+*/
+
 /*
  * dp[i+1]=
  * 1.ch[i]=='(' =>0
@@ -19,6 +23,14 @@ using namespace std;
  * merge  groups: [$group1][$group2]=>[$group]
  *
  */
+#include <iostream>
+#include <string>
+#include <stack>
+#include <algorithm>
+#include <memory>
+
+using namespace std;
+
 class Solution {
 public:
   int longestValidParentheses(string s) {
