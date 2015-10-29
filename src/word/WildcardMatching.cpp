@@ -24,6 +24,15 @@ isMatch("aab", "c*a*b") → false
 S=s1s2....sn
 P=p1p2....pm
 
+dp[i][j]=1， 表示S[1,i]匹配P[1,j]，即s1s2.....si与p1p2....pj 匹配，
+这里对某个i，j在[1,m]中有多个值使得d[i][j]==1,即S[1,i]匹配P多个前缀子串。
+递推求解时，考虑补充进去s(i+1)时，找到S[1,i]匹配的多个前缀子串基础上，寻找S[1,i+1]
+匹配的情况，即dp[i+1] 一维数组的值。
+
+for i in n //每次补充一个S中的字符
+  for j in m //
+
+
 a)dp[i][j]=1 <= dp[i-1][j-1]==1 && (s[i]==p[j] ||p[j]=='?') {j>=1 && j<n}
 b)dp[i][k]=1 {k>=j} <= dp[i-1][j]==1 && s[i]='*' {j>=1 && j<n}
 
@@ -37,10 +46,10 @@ b 0 0 0 1 1
 attendtion:
 1.二维数组栈溢出，改为2个一维数组
 2.dp_before->dp_current 丢掉脏数据
-3.边界值，空串等
+3.边界值，空串等，初始值
 
 */
-#include  <iostream>
+#include <iostream>
 #include <memory>
 
 using namespace std;

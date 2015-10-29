@@ -15,12 +15,30 @@ Return true because "leetcode" can be segmented as "leet code".
 /*
 思路：
 S=s1s2....sn
-如果S满足，则存在k使得S[1,k]、S[k,n]也满足，使用动态规划。
+如果S满足可分割，则存在k使得S[1,k]、S[k,n]也满足，问题可以分解，考虑使用动态规划。
 
-dp[k]=1表示S[1,k]满足，对下标i，对所有使得dp[k]=1(k<i),
+dp[k]=1表示S[1,k]满足可分割，对dp[k+1]，对所有使得dp[i]==1(i<=k)的情况，判断S[i+1,k+1] 是否在dict中进而判断
+
+dp[k+1]是否等于1。
 
 状态转移方程：
-dp[i]=1 <= dp[k]==1 && dicts.contain(S[k,i]) {k>=0 && k<i}
+dp[k+1]=1 <= dp[i]==1 && dicts.contain(S[i+1,k+1]) {k>=0 && k<i}
+
+example：
+S="abcdef"
+dict=["abd","abc","def","ab","cdef","abcd"]
+
+k=1,dp[1]=0;
+k=2,dp[2]=1; dict.contains("ab")
+k=3,dp[3]=1;dict.contains("abc")
+k=4,因为dp[0]=1,dp[2]=1("ab"),dp[3]=1("abc"),此时要考虑"cd","d","abcd"是否在dict中，进而判断dp[4]是否等于1
+
+
+
+
+
+注意：
+初始值，即dp[0]=1
 
 */
 #include <unordered_set>

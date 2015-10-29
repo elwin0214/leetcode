@@ -13,9 +13,19 @@ A solution is ["cats and dog", "cat sand dog"].
 
 思路：
 参考 word break。
-数组多了一维，用来记录满足当前条件满足时，各个下标
+数组多了一维，用来记录满足当前条件满足时，寻找到的前缀子串。
 
-S[1,k]满足，则dp[k] 是一个数组。dp[k][j]==1 => S[1,j]满足
+定义：
+sentence:满足可分割。
+word：满足可分割，并且dict包含word
+
+S=s1...sn
+dp[n+1][n+1]，dp[k][] 是一维数组，记录当前S[1,k]的状态信息。
+1.dp[k][0]=1,表示S[1,k]是sentence；
+2.dp[k][0]=1,则对于所有的{i|dp[k][i]==1,i>0&&i<n}，可以得到一个集合，表示
+S[1,i]是sentence，并且S[1,k],可以分割成S[1,i]、S[i+1,k]，并且S[1,i]是sentence，S[i+1,k]是word。
+
+因为可以用dp 递归出所有的解。
 
 */
 
