@@ -23,6 +23,12 @@ Note: Given n will be between 1 and 9 inclusive.
 */
 /*
 思路：分组 求位置
+S={1，2，3，... n}
+k=k-1; 减1 便于计算
+
+a1 = (k)/((n-1)!) + 1 ; k = k%((n-1)!)=> 第一个数是 是S里面的第a1个数，
+
+a2 = (k)/((n-2)!) + 1; k=...  => 第二个数是 S里面第a2个数（去掉上一步的a1个数后）
 */
 #include <iostream>
 #include  <vector>
