@@ -1,2 +1,5 @@
-    tab
-  2 space
+int main()
+{
+  int a;
+  return;
+}
