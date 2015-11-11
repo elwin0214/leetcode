@@ -26,7 +26,7 @@ class Solution
 public:
 	vector<vector<int>> combinationSum3(int k, int n) 
 	{
-		vector<vector<int>> results;
+	    vector<vector<int>> results;
 		vector<int> result;
 		vector<int> vec;
 		for(int i=1; i<=9; i++)
