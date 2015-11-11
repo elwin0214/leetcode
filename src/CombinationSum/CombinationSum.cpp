@@ -33,16 +33,14 @@ public:
   }
   void select(vector<vector<int>>& results,vector<int>& result,vector<int>& candidates,int index,int sum,int target)
   {
-    for(; index<candidates.size();index++)
+    for(; index < candidates.size(); index++)
     {
-    	if(candidates[index]==candidates[index+1])
-    	{
-
-    		continue;//discard duplicated
-    	}
-      sum=sum+candidates[index];
-      result.push_back(candidates[index]);
-
+      if(candidates[index] == candidates[index+1] && index < candidates.size() - 1)
+      {
+        continue;//discard duplicated
+      }
+      sum=sum + candidates[index];
+      result.push_back(candidates[index]);  
       if(sum>target)
       {
       	result.erase(result.end()-1);
@@ -74,17 +72,20 @@ void print(vector<vector<int>> &result)
 
 int main(){
 	Solution s;
-  vector<int> candidates={2,2};
-  vector<vector<int>> vec=s.combinationSum(candidates,3);
-  cout<<vec.size()<<endl;
+  vector<int> candidates;
+  vector<vector<int>> vec;
+
+
 	candidates={1,2};
 	vec=s.combinationSum(candidates,3);
 	print(vec);
+
+
 	candidates={2,2,3,5,6};
 	vec=s.combinationSum(candidates,9);
 	print(vec);
 
-	candidates={2,5,9};
+	candidates={2,9,5};
 	vec=s.combinationSum(candidates,11);
 	print(vec);
 }
