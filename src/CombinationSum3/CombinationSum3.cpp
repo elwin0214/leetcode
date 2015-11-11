@@ -21,10 +21,11 @@ Output:
 #include <iostream>
 using namespace std;
 
-class Solution {
+class Solution 
+{
 public:
 	vector<vector<int>> combinationSum3(int k, int n) 
-    {
+	{
 		vector<vector<int>> results;
 		vector<int> result;
 		vector<int> vec;
@@ -47,7 +48,7 @@ public:
 			}
 			if(sum==target && num==size)
 			{
-				result.push_back(vec[index]);
+			result.push_back(vec[index]);
 				results.push_back(result);
 				result.erase(result.end()-1);
 				break;
