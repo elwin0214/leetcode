@@ -59,7 +59,7 @@ public:
         //result.push_back(root->val);
         //stk.push(root);
         TreeNode* node = root;
-        while (node !=NULL || !s.empty()) 
+        while (node != NULL || !s.empty()) 
         {
             while (node != NULL)
             {
