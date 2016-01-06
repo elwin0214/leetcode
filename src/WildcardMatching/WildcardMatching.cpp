@@ -65,39 +65,44 @@ public:
 
     dp_before[0] = 1;
     //dp_current[0] = 1;
-    for (int i=0; i<p_len; i++) {// i : the index of pattern string
-      for (int j=0; j<=s_len; j++) { // j: the index of dp array
-        if ( dp_before[j] != 1 ) {
+    for (int i = 0; i < p_len; i++) 
+    {// i : the index of pattern string
+      for (int j = 0; j <= s_len; j++) 
+      { // j: the index of dp array
+        if ( dp_before[j] != 1 ) 
+        {
           continue;
         }
-        if (p[i] == '*') { 
-          while (j <= s_len)dp_current[j++] = 1; 
+        if (p[i] == '*') 
+        { 
+          while (j <= s_len) dp_current[j++] = 1; 
           break;
         }
-        if ((j < s_len) && (p[i] == s[j] || p[i] == '?')) {
+        if ((j < s_len) && (p[i] == s[j] || p[i] == '?')) 
+        {
           //cout<<p[i]<<" "<<s[j]<<" "<<j<<endl;
           dp_current[j+1] = 1;
           continue;
         }
       }
 
-      move(dp_current,dp_before,s_len+1);
+      move(dp_current, dp_before, s_len+1);
       //print(dp_before,s_len+1);
     }
     return dp_before[s_len];
   }
 
   void move(int *s,int *t,int len) {
-    int i=0;
-    int j=0;
-    for(; i<len; ){
-      t[j++]=s[i++];
-      s[i-1]=0;
+    int i = 0;
+    int j = 0;
+    for(; i < len; ){
+      t[j++] = s[i++];
+      s[i-1] = 0;
     }
   }
 
   void print(int *s, int len){
-    for(int i=0; i<len; i++) {
+    for(int i = 0; i < len; i++) {
       cout<<s[i]<<" ";
     }
     cout<<endl;

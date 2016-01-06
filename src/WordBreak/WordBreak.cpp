@@ -34,9 +34,6 @@ k=3,dp[3]=1;dict.contains("abc")
 k=4,因为dp[0]=1,dp[2]=1("ab"),dp[3]=1("abc"),此时要考虑"cd","d","abcd"是否在dict中，进而判断dp[4]是否等于1
 
 
-
-
-
 注意：
 初始值，即dp[0]=1
 
@@ -50,43 +47,43 @@ using namespace std;
 
 class Solution {
 public:
- bool wordBreak(string s, unordered_set<string>& wordDict) 
- {
-  if(s.size()==0)return false;
-  if(wordDict.size()==0)return false;
-  int len=s.size();
-  int dp[len+1];
-  memset(dp,0,sizeof(dp));
-  dp[0]=1;
-  int index=0;
-  for(int i=1; i<=len; i++)
+  bool wordBreak(string s, unordered_set<string>& wordDict) 
   {
-   for(int j=0;j<i;j++)
-   {
-    if(dp[j]==1){
-      //cout<<j<<" "<<i<<" "<<s.substr(j,i-j)<<endl;
-      if( wordDict.find(s.substr(j,i-j))!=wordDict.end())
+    if (s.size() == 0) return false;
+    if (wordDict.size() == 0) return false;
+    int len = s.size();
+    int dp[len+1];
+    memset(dp, 0, sizeof(dp));
+    dp[0] = 1;
+    int index = 0;
+    for (int i = 1; i <= len; i++)
+    {
+      for (int j = 0;j < i; j++)
       {
-        dp[i]=1;
+        if (dp[j] == 1)
+        {
+        //cout<<j<<" "<<i<<" "<<s.substr(j,i-j)<<endl;
+          if( wordDict.find(s.substr(j,i-j)) != wordDict.end())
+          {
+            dp[i] = 1;
+          }
+        }
       }
     }
-   }
+    return dp[len] == 1;
   }
-  return dp[len]==1;
- }
 };
 
 int main(){
- Solution s;
- string str="leetcode";
- unordered_set<string> uset={"leet","code"};
- cout<<s.wordBreak(str,uset)<<endl;
+  Solution s;
+  string str = "leetcode";
+  unordered_set<string> uset = {"leet","code"};
+  cout << s.wordBreak(str,uset)<<endl;
 
- str="abcde";
- uset={"ab","abc","de"};
- cout<<s.wordBreak(str,uset)<<endl;
+  str = "abcde";
+  uset = {"ab","abc","de"};
+  cout << s.wordBreak(str,uset) <<endl;
 
-
- return 0;
+  return 0;
 }
 

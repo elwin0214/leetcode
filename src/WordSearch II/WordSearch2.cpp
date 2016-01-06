@@ -66,9 +66,9 @@ private:
 	TrieNode *root;
 
 	void free(TrieNode *node){
-		for(int i=0;i<MAX_SIZE;i++)
+		for (int i = 0;i < MAX_SIZE; i++)
 		{
-			if((*node)[i]==NULL)continue;
+			if ((*node)[i] == NULL) continue;
 			free((*node)[i]);
 		}
 		delete node;
@@ -76,7 +76,7 @@ private:
 
 public:
 	TrieTree(){
-		root=new TrieNode();
+		root = new TrieNode();
 	}
 	TrieNode* getRoot()
 	{
@@ -84,25 +84,24 @@ public:
 	}
 	void add(vector<string> &words)
 	{
-		for(int i=0;i<words.size();i++)
+		for(int i = 0; i < words.size(); i++)
 		{
-			int len=words[i].size();
-			TrieNode *node=root;
-			for(int j=0;j<len;j++)
+			int len = words[i].size();
+			TrieNode *node = root;
+			for(int j=0; j < len; j++)
 			{
-				int index=words[i][j]-'a';
-				TrieNode *child=(*node)[index];
-				if(child==NULL)
+				int index = words[i][j] - 'a';
+				TrieNode *child = (*node)[index];
+				if(child == NULL)
 				{
-					child=new TrieNode();
-					(*node)[index]=child;
+					child = new TrieNode();
+					(*node)[index] = child;
 				}
-				if(j==len-1)//aaab,aaa or aaa,aaab !!! overwrite
+				if(j == len - 1)//aaab,aaa or aaa,aaab !!! overwrite
 				{
-					child->word=true;
+					child->word = true;
 				}
-				node=child;
-				
+				node = child;
 			}
 		}
 	}
@@ -115,37 +114,37 @@ public:
 		queue.push(root);
 		while(!queue.empty())
 		{
-			TrieNode *node=queue.front();
+			TrieNode *node = queue.front();
 			queue.pop();
-			for(int i=0;i<MAX_SIZE;i++)
+			for(int i = 0;i < MAX_SIZE; i++)
 			{
-				if((*node)[i]==NULL)continue;
+				if ((*node)[i] == NULL) continue;
 				queue.push((*node)[i]);
-				cout<<((char)(i+'a'))<<i<<"("<<(*node)[i]->word<<")"<<" ";
+				cout<< ((char)(i + 'a'))<< i << "(" << (*node)[i]->word<<")" << " ";
 			}
-			cout<<endl;
+			cout<< endl;
 		}
 	}
-	void list(vector<string> &vec,vector<char> &str,TrieNode *node)
+	void list(vector<string> &vec, vector<char> &str, TrieNode *node)
 	{
-		for(int i=0;i<MAX_SIZE;i++)
+		for(int i = 0; i < MAX_SIZE; i++)
 		{
-			if((*node)[i]==NULL)
+			if ((*node)[i] == NULL)
 				continue;
-			str.push_back((char)('a'+i));
-			if((*node)[i]->isWord())
+			str.push_back((char)('a' + i));
+			if ((*node)[i]->isWord())
 			{
-				vec.push_back(string(str.begin(),str.end()));
+				vec.push_back(string(str.begin(), str.end()));
 			}
 
 			list(vec,str,(*node)[i]);
-			str.erase(str.end()-1);
+			str.erase(str.end() - 1);
 		}
 	}
   void list(vector<string> &vec)
 	{
 		vector<char> v;
-		list(vec,v,root); 
+		list(vec, v, root); 
 	}
 };
  
@@ -154,28 +153,28 @@ public:
 vector<string> findWords(vector<vector<char>>& board, vector<string> &words) 
 {
 	vector<string> result;
-	int m=board.size();
-	if(m==0)
+	int m = board.size();
+	if(m == 0)
 		return result;
-	int n=board[0].size();
+	int n = board[0].size();
 
 	vector<vector<int>> path;
-	for(int i=0;i<m;i++)
+	for(int i = 0; i < m; i++)
 	{
 		path.push_back(vector<int>(n));
 	}
 	TrieTree tree;
 	tree.add(words);
 
-	TrieNode *root=tree.getRoot();
+	TrieNode *root = tree.getRoot();
  	vector<char> word;
-	for(int i=0; i<m; i++)
+	for(int i = 0; i < m; i++)
 	{
-		for(int j=0; j<n; j++)
+		for(int j = 0; j < n; j++)
 		{
-			if((*root)[board[i][j]-'a']!=NULL)
+			if((*root)[board[i][j] - 'a']!=NULL)
 			{
-				search(board,result,word,path,i,j,root);
+				search(board, result, word, path, i, j, root);
 			} 
 		}
 	}
@@ -184,56 +183,57 @@ vector<string> findWords(vector<vector<char>>& board, vector<string> &words)
 	return result;
 }
 
-void search(vector<vector<char>>& board,vector<string> &result,vector<char> &word,vector<vector<int>>& path,int i,int j,TrieNode *node)
+void search(vector<vector<char>>& board, vector<string> &result, vector<char> &word, vector<vector<int>>& path, int i, int j, TrieNode *node)
 {
 	
-	if(path[i][j]==1)
+	if (path[i][j] == 1)
 	{
  		return;
 	}
-	TrieNode *child=(*node)[board[i][j]-'a'];
-	if(child==NULL)
+	TrieNode *child=(*node)[board[i][j] - 'a'];
+	if (child == NULL)
 	{
  		return;
 	}
  
-	path[i][j]=1;
+	path[i][j] = 1;
 	word.push_back(board[i][j]);
-	if(child->isWord()){
-		child->word=false;
-		string s(word.size(),' ');
-		int k=0;
+	if(child->isWord())
+	{
+		child->word = false;
+		string s(word.size(), ' ');
+		int k = 0;
 
-		for_each(word.begin(),word.end(),[&](char c){
+		for_each(word.begin(), word.end(), [&](char c){
 			s[k++]=c;
 		});
 		result.push_back(s);
 	}
-	if(i<board.size() && i>0) 
+	if(i < board.size() && i>0) 
 	{
-		search(board,result,word,path,i-1,j,child);
+		search(board, result, word, path, i - 1, j, child);
 	}
-	if(i<board.size()-1 && i>=0)
+	if(i < board.size() - 1 && i >= 0)
 	{
-		search(board,result,word,path,i+1,j,child);
+		search(board, result, word, path, i + 1, j, child);
 	}
-	if(j<board[0].size() && j>0)
+	if(j < board[0].size() && j > 0)
 	{
-		search(board,result,word,path,i,j-1,child);
+		search(board, result, word, path, i, j - 1, child);
 	}
-	if(j<board[0].size()-1 && j>=0)
+	if(j < board[0].size()-1 && j>=0)
 	{
-		search(board,result,word,path,i,j+1,child);
+		search(board, result, word, path, i, j + 1, child);
 	}
 
-	word.erase(word.end()-1);
-	path[i][j]=0;
+	word.erase(word.end() - 1);
+	path[i][j] = 0;
 }
 };
 
 void print(vector<string> words)
 {
-	for(int i=0; i<words.size(); i++)
+	for(int i = 0; i < words.size(); i++)
 	{
 		cout<<words[i]<<endl;
 	}
