@@ -4,7 +4,7 @@ leetcode
 
 
 |title|language|difficulty|type|
-|----|---|---||
+|----|---|---|---|
 |[Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design)|[C++](src/Add%20and%20Search%20Word/AddandSearchWord.cpp)|Medium|trie tree|
 |[Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[C++](src/MaximumProductofWordLengths/MaximumProductofWordLengths.cpp)|Medium|bit|
 |[Word Ladder](https://leetcode.com/problems/word-ladder/)|[C++](src/WordLadder/WordLadder.cpp)|Medium|bfs|
