@@ -21,7 +21,6 @@ leetcode
 |[Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)|[C++](src/Evaluate%20Reverse%20Polish%20Notation/EvaluateReversePolishNotation.cpp)|Medium||
 |[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[C++](src/Find%20Minimum%20in%20Rotated%20Sorted%20Array/FindMinimuminRotatedSortedArray.cpp)|Medium||
 |[FindPeakElement](https://leetcode.com/problems/find-peak-element/)|[C++](src/FindPeakElement/FindPeakElement.cpp)|Medium||
-|[FindPeakElement](https://leetcode.com/problems/find-peak-element/)|[C++](src/FindPeakElement/FindPeakElement.cpp)|Medium||
 |[GenerateParentheses](https://leetcode.com/problems/generate-parentheses/)|[C++](src/GenerateParentheses/GenerateParentheses.cpp)|Medium||
 |[Gray Code](https://leetcode.com/problems/gray-code/)|[C++](src/Gray%20Code/GrayCode.cpp)|Medium||
 |[HIndex](https://leetcode.com/problems/h-index/)|[C++](src/HIndex/HIndex.cpp)|Medium||
@@ -31,7 +30,6 @@ leetcode
 |[Kth Smallest Element in a BST](https://leetcode.com/problems/kth-largest-element-in-an-array/)|[C++](src/Kth%20Smallest%20Element%20in%20a%20BST/KthSmallestElementinaBST.cpp)|Medium||
 |[Largest Number](https://leetcode.com/problems/largest-number/)|[C++](src/Largest%20Number/LargestNumber.cpp)|Medium||
 |[Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)|[C++](src/Letter%20Combinations%20of%20a%20Phone%20Number/LetterCombinationsofaPhoneNumber.cpp)|Medium|dfs|
-|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[C++](src/Linked%20List%20Cycle/LinkedListCycle.cpp)|Medium||
 |[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[C++](src/Linked%20List%20Cycle/LinkedListCycle.cpp)|Medium||
 |[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[C++](src/Longest%20Palindromic%20Substring/LongestPalindromicSubstring.cpp)|Medium||
 |[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[C++](src/Longest%20Substring%20Without%20Repeating%20Characters/LongestSubstringWithoutRepeatingCharacters.cpp)|Medium||
@@ -55,6 +53,9 @@ leetcode
 |[Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|[C++](src/PermutationSequence/PermutationSequence.cpp)|Medium||
 |[Permutations](https://leetcode.com/problems/permutations/)|[C++](src/Permutations/Permutations.cpp)|Medium||
 |[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)|[C++](src/Sudoku%20Solver/SudokuSolver.cpp)|Hard|dfs、stack、backtrace|
+|[ThreeSum](https://leetcode.com/problems/3sum/)|[C++](src/ThreeSum/ThreeSum.cpp)|Medium||
+|[ThreeSumClosest](https://leetcode.com/problems/3sum-closest/)|[C++](src/ThreeSumClosest/ThreeSumClosest.cpp)|Medium||
+|[Two Sum](https://leetcode.com/problems/two-sum/)|[C++](src/Two%20Sum/TwoSum.cpp)|Medium||
 |[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/)|[C++](src/WildcardMatching/Wildcard Matching.cpp)|Hard|dp|
 |[Word Break](https://leetcode.com/problems/word-break/)|[C++](src/WordBreak/WordBreak.cpp)|Medium|dp|
 |[Word Break II](https://leetcode.com/problems/word-break-ii/)|[C++](src/WordBreak%20II/WordBreak2.cpp)|Hard|dp|
