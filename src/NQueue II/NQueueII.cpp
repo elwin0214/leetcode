@@ -1,32 +1,17 @@
+  /*
+
+
+
+https://leetcode.com/problems/n-queens-ii/
+N-Queens II My Submissions Question
+Follow up for N-Queens problem.
+Now, instead outputting board configurations, return the total number of distinct solutions.
+
+
+
+*/
 /*
-https://leetcode.com/problems/n-queens/
-N-Queens My Submissions Question
-
-The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-Given an integer n, return all distinct solutions to the n-queens puzzle.
-
-Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space respectively.
-
-For example,
-There exist two distinct solutions to the 4-queens puzzle:
-
-[
- [".Q..",  // Solution 1
-  "...Q",
-  "Q...",
-  "..Q."],
-
- ["..Q.",  // Solution 2
-  "Q...",
-  "...Q",
-  ".Q.."]
-]
-
-
-思路：
-
-dfs搜索，用一个数组保存路径。
-
+思路： dfs搜索，用一个数组保存路径。
 */
 
 #include <vector>
