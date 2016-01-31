@@ -13,6 +13,14 @@ You may assume that there will be only one unique solution.
 
 */
 
+/*
+思路：dfs + 回溯
+状态表示：这里一共81个格子，这里一共用以下2种数据结构存储状态：
+1）vector<vector<char > >：一个9*9 二维数组，表示81个格子填的数字
+2）vector<int>：数组里面的每个整数表示一个bitset，1-9 中有填的数字，
+   这里有三个数组，分别表示9行，9列，9个3*3的格子里面数字的布局，方便计算
+*/
+
 #include <iostream>
 #include <vector>
 
@@ -25,9 +33,9 @@ struct Sudoku
 {
 
     //vector<int> pos_bit;
-    vector<int> grp_nums_bit;
-    vector<int> v_nums_bit;
-    vector<int> h_nums_bit;
+    vector<int> grp_nums_bit;//9 个3*3的格子数字填写布局
+    vector<int> v_nums_bit;//9行数字填写布局
+    vector<int> h_nums_bit;//9列数字填写布局
 
     Sudoku():grp_nums_bit(SIZE),v_nums_bit(SIZE),h_nums_bit(SIZE)
     {
