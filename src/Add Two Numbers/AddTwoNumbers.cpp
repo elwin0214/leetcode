@@ -15,7 +15,7 @@ Show Tags
 Show Similar Problems
 
 */
-
+#include <stdio.h>
 struct ListNode {
     int val;
     ListNode *next;
@@ -67,6 +67,5 @@ public:
 
 int main()
 {
-    Solution sol;
-    ListNode n1 = new ListNode(9);
+    return 0;
 }

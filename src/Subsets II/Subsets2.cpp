@@ -27,7 +27,40 @@ view  /src/Subsets/Subsets.cpp
 */
 class Solution {
 public:
-    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        
+vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+
+    sort(nums.begin(), nums.end());
+    vector<vector<int>> results;
+    vector<int> result;
+    result.reserve(nums.size());
+    subsets(results, result, nums, 0);
+    //results.push_back(vector<int>(0));
+    return results;
+}
+
+void subsets(vector<vector<int>> &results, vector<int> &result, vector<int> &nums, int pos)
+{
+
+    
+    if (pos == nums.size()){
+        results.push_back(result);
+        return;
     }
+    results.push_back(result);
+
+    bool compare = false;
+    int last = -1;
+    for (int i = pos; i < nums.size(); i++)
+    {
+        if (compare)
+        {
+            if (last == nums[i])continue;
+        }
+        if (!compare) compare = true;
+        last = nums[i];
+        result.push_back(nums[i]);
+        subsets(results, result, nums, i+1);
+        result.erase(result.end()-1);
+    }
+}
 };
