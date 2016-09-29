@@ -13,13 +13,15 @@ Subscribe to see which companies asked this question
 */
 
 /*
+  dp[i] 表示 s[0, i]中以S[i]结尾的字符串包含的 括号对数
  * dp[i+1]=
- * 1.ch[i]=='(' =>0
-   2.ch[i]==')'&& dp[i]==0  
+ * 1.S[i]=='(' =>0
+   2.S[i]==')'&& dp[i]==0  
     2.1 "[$group]()" => "[$group1][$group2]"
     2.2 "[$group]))" => "[$group]))"
    3.ch[i]==')' && dp[i]!=0 => ")[$group])" or  "([$group])"
 
+  2.2 与 3 不同的地方在 一个有匹配 一个没有匹配
  * merge  groups: [$group1][$group2]=>[$group]
  *
  */
@@ -37,8 +39,8 @@ public:
     int len=s.size();
     int max_len=0;
     int dp[len];
-    memset(dp,0,sizeof(dp));
-    for(int index=0; index<len; index++){
+    memset(dp, 0, sizeof(dp));
+    for(int index = 0; index < len; index++){
 
       char ch = s[index];
       if(index == 0){
@@ -48,22 +50,22 @@ public:
         dp[index]=0;
       } else {
         if (dp[index-1] == 0){
-          if(s[index-1] == '(') {  // new group
+          if (s[index-1] == '(') {  // new group
             dp[index]=1;
           }
         }else{// ([$group]) =>embody
-          int prev_char=index-dp[index-1]*2-1;
+          int prev_char = index - dp[index-1]*2-1;
           if (prev_char >= 0 && s[prev_char] == '(') {
-            dp[index]=dp[index-1]+1;
+            dp[index] = dp[index - 1]+1;
           }
         }
         //merge group :1.[$group1][$group2]  2.[$group1][$index][$group2]
-        int pre_grp=index-dp[index]*2;
+        int pre_grp = index-dp[index]*2;
         if (pre_grp >= 0) {
-          dp[index] = dp[pre_grp]+dp[index];
+          dp[index] = dp[pre_grp] + dp[index];
         } 
       }
-      max_len=max(max_len,dp[index]);
+      max_len=max(max_len, dp[index]);
     }
     return max_len*2;
   }

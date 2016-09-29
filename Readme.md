@@ -74,8 +74,8 @@ leetcode
 |70|[Single Number ](https://leetcode.com/problems/single-number/)|[C++](src/Single%20Number/SingleNumber.cpp)|Easy||
 |71|[Single Number III](https://leetcode.com/problems/permutations/)|[C++](src/Single%20Number%20III/SingleNumberIII.cpp)|Medium||
 |72|[Sort Colors](https://leetcode.com/problems/sort-colors/)|[C++](src/Sort%20Colors/SortColors.cpp)|Medium||
-|73|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)|[C++](src/Spiral%20Matrix/SpiralMatrix.cpp)|Medium||
-|74|[Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)|[C++](src/Spiral%20Matrix%20II/SpiralMatrixII.cpp)|Medium||
+|73|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)|[C++](src/SpiralMatrix/SpiralMatrix.cpp)|Medium||
+|74|[Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)|[C++](src/SpiralMatrix%20II/SpiralMatrix2.cpp)|Medium||
 |75|[Subsets](https://leetcode.com/problems/subsets/)|[C++](src/Subsets/Subsets.cpp)|Medium||
 |76|[Subsets II ](https://leetcode.com/problems/subsets-ii/)|[C++](src/Subsets%20II/SubsetsII.cpp)|Medium||
 |77|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)|[C++](src/Sudoku%20Solver/SudokuSolver.cpp)|Hard|dfs、stack、backtrace|
@@ -88,7 +88,7 @@ leetcode
 |84|[ThreeSum](https://leetcode.com/problems/3sum/)|[C++](src/ThreeSum/ThreeSum.cpp)|Medium||
 |85|[ThreeSumClosest](https://leetcode.com/problems/3sum-closest/)|[C++](src/ThreeSumClosest/ThreeSumClosest.cpp)|Medium||
 |86|[Two Sum](https://leetcode.com/problems/two-sum/)|[C++](src/Two%20Sum/TwoSum.cpp)|Medium||
-|87|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/)|[C++](src/WildcardMatching/Wildcard Matching.cpp)|Hard|dp|
+|87|[Wildcard Matching](https://leetcode.com/problems/wildcard-matching/)|[C++](src/WildcardMatching/WildcardMatching.cpp)|Hard|dp|
 |88|[Word Break](https://leetcode.com/problems/word-break/)|[C++](src/WordBreak/WordBreak.cpp)|Medium|dp|
 |89|[Word Break II](https://leetcode.com/problems/word-break-ii/)|[C++](src/WordBreak%20II/WordBreak2.cpp)|Hard|dp|
 |90|[Word Ladder](https://leetcode.com/problems/word-ladder/)|[C++](src/WordLadder/WordLadder.cpp)|Medium|bfs|

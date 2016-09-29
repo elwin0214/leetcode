@@ -87,7 +87,7 @@ public:
         int i = index - offset;
         int j = index + offset;
         int l = offset;
-        for (; i >=0 && j < size;)
+        for (; i >= 0 && j < size;)
         {
             if (array[i--] == array[j++])
             {
