@@ -37,18 +37,18 @@ public:
         int m = sqrt(n);
         int a[n];
         memset(a, 0, sizeof(a));
-        a[0]=1;
-        for (int k=1; k<n; k++) {
-            int s = sqrt(k+1);
-            if (s*s == (k+1)) {
-                a[k]=1;
+        a[0] = 1;
+        for (int k = 1; k < n; k++) {
+            int s = sqrt(k + 1);
+            if (s * s == (k + 1)) {
+                a[k] = 1;
                 continue;
             }
-            int min = k+1;
+            int min = k + 1;
 
-            for (int i=1; i<=s; i++) {
-                int tmp=a[k-i*i]+1;
-                min=min>tmp?tmp:min;
+            for (int i = 1; i <= s; i++) {
+                int tmp = a[k - i * i] + 1;
+                min = min > tmp ? tmp : min;
             }
             a[k] = min;
            // cout<<(1+k)<<" "<<min<<endl;
