@@ -7,7 +7,7 @@ leetcode
 |3|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[C++](src/Add%20Two%20Numbers/AddTwoNumbers.cpp)|Medium||
 |4|[BasicCalculator](https://leetcode.com/problems/basic-calculator/)|[C++](src/Basic%20Calculator/BasicCalculator.cpp)|Medium||
 |5|[BasicCalculator II](https://leetcode.com/problems/basic-calculator-ii/)|[C++](src/Basic%20Calculator%20II/BasicCalculator2.cpp)|Medium||
-|6|[BestTimetoBuyandSellStock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[C++](src/Best%20Time%20to%20Buy%20and%20Sell%20Stock/BuyAndSellStock.cpp)|Easy||
+|6|[BestTimetoBuyandSellStock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[C++](src/Best%20Time%20to%20Buy%20and%20Sell%20Stock/BestTimetoBuyandSellStock.cpp)|Easy||
 |7|[BestTimetoBuyandSellStockII](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[C++](src/BestTimetoBuyandSellStockII/BuyAndSellStock2.cpp)|Medium||
 |8|[Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)|[C++](src/Binary%20Search%20Tree%20Iterator/BinarySearchTreeIterator.cpp)|Medium||
 |9|[Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[C++](src/Binary%20Tree%20Inorder%20Traversal/BinaryTreeInorderTraversal.cpp)|Medium||
@@ -22,7 +22,7 @@ leetcode
 |18|[Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)|[C++](src/DistinctSubsequences/DistinctSubsequences.cpp)|Hard|dp|
 |19|[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[C++](src/Find%20Minimum%20in%20Rotated%20Sorted%20Array/FindMinimuminRotatedSortedArray.cpp)|Medium||
 |20|[FindPeakElement](https://leetcode.com/problems/find-peak-element/)|[C++](src/FindPeakElement/FindPeakElement.cpp)|Medium||
-|21|[GenerateParentheses](https://leetcode.com/problems/generate-parentheses/)|[C++](src/GenerateParentheses/GenerateParentheses.cpp)|Medium||
+|21|[GenerateParentheses](https://leetcode.com/problems/generate-parentheses/)|[C++](src/Generate%20Parentheses/GenerateParentheses.cpp)|Medium||
 |22|[Gray Code](https://leetcode.com/problems/gray-code/)|[C++](src/Gray%20Code/GrayCode.cpp)|Medium||
 |23|[HIndex](https://leetcode.com/problems/h-index/)|[C++](src/HIndex/HIndex.cpp)|Medium||
 |24|[HIndex II](https://leetcode.com/problems/h-index-ii/)|[C++](src/HIndex%20II/HIndex2.cpp)|Medium||
@@ -53,7 +53,7 @@ leetcode
 |49|[Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[C++](src/PalindromePartitioning/PalindromePartitioning.cpp)|Medium||
 |50|[PartitionList](https://leetcode.com/problems/partition-list/)|[C++](src/PartitionList/Partition%20List.cpp)|Medium||
 |51|[Peeking Iterator](https://leetcode.com/problems/peeking-iterator/)|[C++](src/PeekingIterator/PeekingIterator.cpp)|Medium||
-|52|[Perfect Squares](https://leetcode.com/problems/perfect-squares/)|[C++](src/PerfectSquares/PermutationSequence.cpp)|Medium||
+|52|[Perfect Squares](https://leetcode.com/problems/perfect-squares/)|[C++](src/PerfectSquares/PerfectSquares.cpp)|Medium||
 |53|[Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|[C++](src/PermutationSequence/PermutationSequence.cpp)|Medium||
 |54|[Permutations](https://leetcode.com/problems/permutations/)|[C++](src/Permutations/Permutations.cpp)|Medium||
 |55|[Permutations II](https://leetcode.com/problems/permutations-ii/)|[C++](src/Permutations%20II/Permutations2.cpp)|Medium||
