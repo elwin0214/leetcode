@@ -95,3 +95,5 @@ leetcode
 |91|[WordPattern](https://leetcode.com/problems/word-pattern/)|[C++](src/WordPattern/WordPattern.cpp)|Medium||
 |92|[Word Search](https://leetcode.com/problems/word-search/)|[C++](src/WordSearch/WordSearch.cpp)|Medium|dfs|
 |93|[Word Search II](https://leetcode.com/problems/word-search-ii/)|[C++](src/WordSearch%20II/WordSearch2.cpp)|Hard|dfs、trie tree|
+|94|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/)|[C++](src/Trapping%20Rain%20Water/main.cc)|Hard| |
+|95|[Decode Ways](https://leetcode.com/problems/decode-ways/description/)|[C++](src/Decode%20Ways/main.cc)|Medium|dp|
