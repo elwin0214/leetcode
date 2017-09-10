@@ -51,7 +51,7 @@ leetcode
 |47|[Nim Game](https://leetcode.com/problems/nim-game/)|[C++](src/Nim%20Game/NimGame.cpp)|Easy||
 |48|[Number of Islands](https://leetcode.com/problems/number-of-islands/)|[C++](src/Number%20of%20Islands/NumberofIslands.cpp)|Medium||
 |49|[Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[C++](src/PalindromePartitioning/PalindromePartitioning.cpp)|Medium||
-|50|[PartitionList](https://leetcode.com/problems/partition-list/)|[C++](src/PartitionList/Partition%20List.cpp)|Medium||
+|50|[PartitionList](https://leetcode.com/problems/partition-list/)|[C++](src/Partition%20List/PartitionList.cpp)|Medium||
 |51|[Peeking Iterator](https://leetcode.com/problems/peeking-iterator/)|[C++](src/PeekingIterator/PeekingIterator.cpp)|Medium||
 |52|[Perfect Squares](https://leetcode.com/problems/perfect-squares/)|[C++](src/PerfectSquares/PerfectSquares.cpp)|Medium||
 |53|[Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|[C++](src/PermutationSequence/PermutationSequence.cpp)|Medium||
